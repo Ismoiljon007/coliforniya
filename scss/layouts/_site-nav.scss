@@ -1,0 +1,20 @@
+.site-nav {
+    @include responsive(tables) {
+        display: none;
+    }
+    &__list {
+        display: flex;
+        list-style: none;
+    }
+    &__item:not(:last-child) {
+        margin-right: 3rem;
+    }
+    &__link {
+        text-decoration: none;
+        color: $text-color;
+        text-transform: uppercase;
+        &:hover {
+            color: rgb(72, 175, 141);
+        }
+    }
+}
