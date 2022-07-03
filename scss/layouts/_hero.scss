@@ -1,0 +1,135 @@
+.hero {
+    padding: 2.8rem 0;
+    &__container {
+        position: relative;
+        @include container;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $brand-color;
+        border-radius: 30px;
+        @include responsive(tables) {
+            flex-direction: column-reverse;
+            // align-items: center;
+            // justify-content: center;
+            // text-align: center;
+            padding-bottom: 2rem;
+        }
+    }
+    &__text-wrapper {
+        margin-left: 5rem;
+        @include responsive(tables) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-left: 0;
+        }
+    }
+    &__title {
+        font-size: 5rem;
+        line-height: 6rem;
+        margin-bottom: 1.9rem;
+        @include responsive(desktop) {
+            font-size: 4rem;
+            line-height: 5rem;
+        }
+        @include responsive(phone) {
+            font-size: 3rem;
+            line-height: 4rem;
+        }
+    }
+    &__text {
+        margin-bottom: 3.4rem;
+    }
+    &__btn {
+        font-size: 1.8rem;
+        color: $text-color;
+        text-decoration: none;
+        border-radius: 200px;
+        border: solid 1px #000;
+        padding: 1.4rem 5rem;
+    }
+    &__img {
+        width: 647px;
+        height: 550px;
+        object-fit: contain;
+        margin-right: 5rem;
+        @include responsive(desktop) {
+            width: 550px;
+            height: 450px;
+        }
+        @include responsive(big-tables) {
+            width: 450px;
+            height: 350px;
+        }
+        @include responsive(tables) {
+            margin-right: 0;
+        }
+        @include responsive(phone) {
+            width: 370px;
+            height: 270px;
+            margin-bottom: 1rem;
+        }
+    }
+    &__span {
+        cursor: pointer;
+        width: 100%;
+        max-width: 190px;
+        height: 2px;
+        background-color: $text-color;
+        position: absolute;
+        bottom: 30px;
+        left: 550px;
+        @include responsive(desktop) {
+            left: 400px;
+        }
+        @include responsive(big-tables) {
+            left: 350px;
+        }
+        @include responsive(tables) {
+            left: 280px;
+            bottom: 10px;
+            width: 100px;
+        }
+        @include responsive(phone) {
+            left: 200px;
+        }
+        @include responsive(m-phone) {
+            left: 150px;
+            width: 80px;
+        }
+    }
+    &__span::after {
+        content: '';
+        width: 100%;
+        max-width: 190px;
+        height: 2px;
+        background-color: $text-color;
+        position: absolute;
+        bottom: 0;
+        right: 220px;
+        @include responsive(tables) {
+            right: 120px;
+        }
+        @include responsive(m-phone) {
+            right: 100px;
+        }
+    }
+    &__span::before {
+        content: '';
+        width: 100%;
+        max-width: 190px;
+        height: 2px;
+        background-color: $text-color;
+        position: absolute;
+        bottom: 0;
+        left: 220px;
+        @include responsive(tables) {
+            left: 120px;
+        }
+        @include responsive(m-phone) {
+            left: 100px;
+        }
+    }
+}

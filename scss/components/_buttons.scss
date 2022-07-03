@@ -31,3 +31,22 @@
         height: 30px;
     }
 }
+
+.hero__left-btn {
+    @extend %button;
+    position: absolute;
+    top: 262px;
+    left: 18px;
+    @include responsive(big-tables) {
+        top: 160px;
+    }
+}
+.hero__right-btn {
+    @extend %button;
+    position: absolute;
+    top: 262px;
+    right: 18px;
+    @include responsive(big-tables) {
+        top: 160px;
+    }
+}
